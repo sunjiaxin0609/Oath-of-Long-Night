@@ -1,0 +1,67 @@
+; 长夜誓约 / Oath of Long Night
+; Godot 4.3+ 项目配置
+; 注意：4.4+ 的 uid:// 需重新生成，首次打开后请提交更新后的版本
+
+config_version=5
+
+[application]
+
+config/name="长夜誓约"
+config/name_en="Oath of Long Night"
+config/description="在一场吞没世界的长夜里，你与六个互不信任的誓约者签订有代价的契约，借他们的力量走到黎明。"
+run/main_scene="uid://b0prototype"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://design/assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input]
+
+move_up={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"keycode":87)]
+}
+move_down={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"keycode":83)]
+}
+move_left={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"keycode":65)]
+}
+move_right={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"keycode":68)]
+}
+attack={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"button_index":1)]
+}
+skill_1={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":81)]
+}
+skill_2={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":69)]
+}
+skill_3={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":82)]
+}
+dodge={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":4194325)]
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+anti_aliasing/quality/msaa_2d=2
